@@ -7,8 +7,8 @@ class Preparation( object ):
         self.home_path = ''
         self.scaler = pickle.load( open( self.home_path + 'parameter/scaler.pkl', 'rb' ) )
     
-    def data_cleaning( self, df1 ):
-        df1.fillna( 0, inplace=True )
+    def data_cleaning( self, df_raw ):
+        df1 = df_raw.fillna( 0 )
         return df1
     
     def feature_engineering( self, df2 ):
@@ -115,8 +115,11 @@ class Preparation( object ):
     
     def data_preparation( self, df5 ):
         df5.drop( 'Company', axis=1, inplace=True )
+        
+        # scaling
         df5 = pd.DataFrame( self.scaler.transform( df5 ), index=df5.index, columns=df5.columns )
         
+        # feature selection
         cols_selected = ['Ativo Total',
                          'Caixa e Equivalentes de Caixa',
                          'Imobilizado',
