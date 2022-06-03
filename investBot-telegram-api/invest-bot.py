@@ -73,8 +73,11 @@ def predict( data ):
     return result
 
 def parse_message( message ):
-    chat_id = message['message']['chat']['id']
-    paper_code = message['message']['text']
+    try:
+        chat_id = message['message']['chat']['id']
+        paper_code = message['message']['text']
+    except:
+        return '', ''
     
     paper_code = paper_code.replace( '/', '' )
     
@@ -98,9 +101,9 @@ def index():
             
             # send message
             if result.loc[0, 'prediction']:
-                msg = 'The paper {} will yield 3% or more until the next quarter -> {}'.format( result.loc[0, "Company"], result.loc[0, "prediction"] )
+                msg = 'O papel {} irá render 3% ou mais até o próximo trimestre -> {}'.format( result.loc[0, "Company"], result.loc[0, "prediction"] )
             else:
-                msg = 'The paper {} will not yield 3% or more until the next quarter -> {}'.format( result.loc[0, "Company"],  result.loc[0, "prediction"] )
+                msg = 'O papel {} não irá render 3% ou mais até o próximo trimestre -> {}'.format( result.loc[0, "Company"],  result.loc[0, "prediction"] )
             
             send_message( chat_id, msg )
             return Response( 'OK', status=200 )
