@@ -1,44 +1,31 @@
-# InvestBot: a bot for stock classification using fundamentalist analysis
+# InvestBot: um bot para classificação de ações da bolsa de valores mediante técnicas de mineração de dados
 
 <p align='center'>
     <img src='img/bot.jpg'>
 </p>
 
-# 1. Problem
+# 1. Problema
 
-InvestBot is a decision support tool for investors. It consists of classifying stocks on the stock exchange as a reliable investment or not to buy at that particular time, based on the following criteria:
+Atualmente, muitos investidores se arriscam na bolsa de valores sem qualquer conhecimento sobre o mercado, renda variável, ou até mesmo sobre a própria empresa em que estão investindo, e por consequência, acabam perdendo o seu dinheiro. Adicionalmente, devido à alta volatilidade dos papéis e à instabilidade econômica e política brasileira, o mercado de ações se torna ainda mais traiçoeiro. Por este motivo, o objetivo deste trabalho é criar uma ferramenta que possa apoiar a decisão dos investidores.
 
-- if the stock price will yield 3% or more until the next quarter
+# 2. Solução Proposta
 
-That is, a stock will be classified as reliable if it yields 3% or more. If the stock depreciates, or yield less than 3%, it will be classified as unreliable. 
+Para solucionar o problema, será criado um bot no Telegram que é capaz de classificar as ações da bolsa de valores como confiáveis ou não confiáveis para investir. Para tal fim, as ações serão rotuladas com base no seguinte critério: se a ação render 3% ou mais até o próximo trimestre, será classificada como confiável, caso contrário, não confiável. Como o propósito do trabalho é ajudar os investidores a realizarem bons investimentos e, principalmente, não perderem dinheiro, foi usado esse valor de valorização pois além de dar uma margem de garantia que a ação irá valorizar, também faz com que as ações ditas confiáveis rendam de forma similar ao índice ibovespa, que historicamente rendeu 12% ao ano.
 
-**An important question is: how will we predict if a stock will appreciate until the next quarter?**
+# 3. Estratégia de Solução:
 
-Basically, we will use a very famous approach in the investment world: fundamental analysis. This technique aims to determine the intrinsic value of a company, and its growth potential. For this, it uses some data that are called fundamental indicators, and these can be found from the balance sheet and income statement of companies.
-
-With the data from the indicators collected, and the classes of stocks already defined, following the criteria explained above, some classification models will be trained, in order that they can predict whether a stock will appreciate more than 3% until the next quarter.
-
-However, a doubt may arise: **fundamental analysis is used for medium and long-term investments, so is it possible to analyze the data of fundamental indicators to determine if a stock will appreciate until the next quarter? Well, that's what we'll find out at the end of this work.** As the fundamental analysis makes it possible to discover the real value of a stock, it may be possible from it to determine whether a stock will appreciate in value until the next quarter.
-
-**The main objective here is to build a tool that supports investors' decision making for short-term investments, helping him to determine whether an action is reliable to buy at any given time.**
-
-In the next sections, each of the steps necessary for us to reach the desired result will be developed.
-
-# 2. Solution Strategy
-
-To solve the problem, we will follow these steps:
-
-- **0.0.** Data Collection.
-- **1.0.** Data Description.
-- **2.0.** Feature Engineering
-- **3.0.** Data Filtering
-- **4.0.** Exploratory Data Analysis
-- **5.0.** Data Preparation
-- **6.0.** Feature Selection
-- **7.0.** Machine Learning Modelling
-- **8.0.** Hyperparameter Fine Tuning
-- **9.0.** Machine Learning Performance
-- **10.0.** Deploy Model to Production
+- **Etapa 01. Coleta dos dados:** Serão coletados dados de balanço patrimonial e demonstrativos de resultados das empresas listadas na B3 (bolsa de valores brasileira), do período de junho de 2011 a setembro de 2021.
+- **Etapa 02. Descrição dos Dados:** Em seguida, serão utilizadas algumas técnicas estatísticas para identificar dados irrelevantes, discrepantes, faltantes ou que estejam fora do escopo do trabalho. Esta etapa é importante para descobrir o quão desafiador é o problema.
+- **Etapa 03. Feature Engineering:** Além dos dados coletados, serão 
+- **Etapa 04. Filtragem dos Dados:**
+- **Etapa 05. Análise Exploratória dos Dados:**
+- **Etapa 06. Preparação dos Dados:**
+- **Etapa 07. Seleção de Variáveis:**
+- **Etapa 08. Machine Learning Modelling:**
+- **Etapa 09. Hyperparameter Fine Tuning:**
+- **Etapa 10. Machine Learning Performance:**
+- **Etapa 11. Deploy Model to Production:**
+- **Etapa 12. Criação do Telegram Bot:**
 
 # 3. Top 3 Data Insights
 
