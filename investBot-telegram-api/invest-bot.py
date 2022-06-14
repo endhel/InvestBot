@@ -101,15 +101,15 @@ def index():
             
             # send message
             if result.loc[0, 'prediction']:
-                msg = 'O papel {} irá render 3% ou mais até o próximo trimestre -> {}'.format( result.loc[0, "Company"], result.loc[0, "prediction"] )
+                msg = 'O papel {} irá render 3% ou mais até o próximo trimestre!'.format( result.loc[0, "Company"] )
             else:
-                msg = 'O papel {} não irá render 3% ou mais até o próximo trimestre -> {}'.format( result.loc[0, "Company"],  result.loc[0, "prediction"] )
+                msg = 'O papel {} não irá render 3% ou mais até o próximo trimestre!'.format( result.loc[0, "Company"] )
             
             send_message( chat_id, msg )
             return Response( 'OK', status=200 )
                 
         else:
-            send_message( chat_id, 'Paper Code Not Available!' )
+            send_message( chat_id, 'Código de Ação Inválido!' )
             return Response( 'OK', status=200 )
     
     else:
