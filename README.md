@@ -79,6 +79,21 @@ Os testes foram realizados usando os seguintes algoritmos:
 |  Multilayer Perceptron | 0.59 | 0.50 | 0.24 | 0.32 |
 |  Random Forest | 0.64 | 0.60 | 0.42 | 0.49 |
 
+O modelo de Random Forest obteve a melhor performance, tendo alcançado 60% de precisão para classificar ações "confiáveis", logo foi o algoritmo escolhido para ser utilizado na etapa de Hyperparameter Fine Tuning.
+
+**Performance Final - Hyperparameter Fine Tunning Cross Validation**
+
+Após encontrar os melhores parâmetros para o modelo através do metódo Random Search, as métricas finais para o modelo foram as seguintes:
+
+| Nome do Modelo | Acurácia | Precisão | Recall  | F1-score |
+|-----------|---------|-----------|---------|---------|
+|  Random Forest | 0.64 | 0.61 | 0.39   | 0.47 |
+
 # 6. Conclusão
 
+O objetivo principal do trabalho foi alcançado, uma vez que através do modelo criado, utilizando o algoritmo Random Forest, foi possível classificar ações como confiáveis ou não para se investir com 60% de precisão. Além disso, os objetivos específicos também foram alcançados, sendo criado um bot no Telegram, que com o uso do modelo, apoiasse a tomada de decisão. Como conclusão, observou-se que a ferramenta construída é simples, acessível, fácil de usar, e fica como sugestão para auxiliar os investidores e apoiar a tomada de decisão.
+
 # 7. Próximos Passos
+
+Para trabalhos futuros, sugere-se encontrar mais variáveis dos dados, que possuem um maior impacto na variável resposta, a fim de aumentar a precisão do modelo para
+classificar ações “confiáveis”. Ademais, também pode ser interessante aumentar o período de previsão do modelo para seis meses ou até um ano, pois assim poderá contribir com os investidores que visam o longo prazo. Por fim, pode-se aperfeiçoar o bot no Telegram, para que ele faça uma coleta automática dos dados atuais das empresas assim que o usuário enviar o código da ação.
