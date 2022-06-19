@@ -25,8 +25,8 @@ Para acessar o bot do modelo no telegram, clique abaixo:
 - **Etapa 03. Feature Engineering:** criação de novas variáveis que ajudem a explicar o fenômeno observado. Como o objetivo é prever a valorização das ações no futuro, serão calculados alguns indicadores fundamentalistas das empresas, pois com eles é possível antecipar o comportamento futuro dos papéis, com base nos balanços e resultados das empresas.
 - **Etapa 04. Filtragem dos Dados:** antes de realizar a análise exploratória dos dados, é preciso filtrar algumas linhas e colunas que não serão mais necessárias para o restante do trabalho.
 - **Etapa 05. Análise Exploratória dos Dados:** exploração dos dados, a fim de entender melhor o impacto das variáveis preditoras na variável resposta.
-- **Etapa 06. Preparação dos Dados:** Preparação dos dados, utilizando algumas técnicas de transformação, para que possam ser submetidos aos algoritmos de classificação.
-- **Etapa 07. Seleção de Variáveis:** seleçao dos atributos mais relevantes para explicar o comportamento do fenômeno.
+- **Etapa 06. Preparação dos Dados:** Preparação dos dados, utilizando algumas técnicas de transformação, para que os dados possam ser submetidos aos algoritmos de classificação.
+- **Etapa 07. Seleção de Variáveis:** seleção dos atributos mais relevantes para explicar o comportamento do fenômeno.
 - **Etapa 08. Machine Learning Modelling:** treinamento dos modelos de machine learning.
 - **Etapa 09. Hyperparameter Fine Tuning:** escolha dos valores que maximizam o aprendizado do modelo para cada um dos hiperparâmetros.
 - **Etapa 10. Machine Learning Performance:** avaliação da performance do modelo.
@@ -53,7 +53,7 @@ Os testes foram realizados usando os seguintes algoritmos:
 
 # 5. Performance dos Modelos de Machine Learning
 
-**Os valores de Precisão, Recall e F1-score são referentes à classe "confiável"**
+**Os valores de Precisão, Recall e F1-score são referentes à classe "confiável"**.
 
 **Hold-out** 
 
@@ -81,7 +81,7 @@ Os testes foram realizados usando os seguintes algoritmos:
 
 O modelo de Random Forest obteve a melhor performance, tendo alcançado 60% de precisão para classificar ações "confiáveis", logo foi o algoritmo escolhido para ser utilizado na etapa de Hyperparameter Fine Tuning.
 
-**Performance Final - Hyperparameter Fine Tunning Cross Validation**
+**Performance Final - Hyperparameter Fine Tunning Cross Validation**:
 
 Após encontrar os melhores parâmetros para o modelo através do metódo Random Search, as métricas finais para o modelo foram as seguintes:
 
