@@ -35,9 +35,49 @@ Para acessar o bot do modelo no telegram, clique abaixo:
 
 # 4. Modelos de Machine Learning aplicados
 
+Os testes foram realizados usando os seguintes algoritmos:
 
+**Dummy Classifier**
+
+**Logistic Regression**
+
+**Decision Tree**
+
+**K-Nearest Neighbors**
+
+**Naive Bayes**
+
+**Multilayer Perceptron**
+
+**Random Forest**
 
 # 5. Performance dos Modelos de Machine Learning
+
+**Os valores de Precisão, Recall e F1-score são referentes à classe "confiável"**
+
+**Hold-out** 
+
+| Nome do Modelo | Acurácia | Precisão    | Recall  | F1-score |
+|-----------|---------|-----------|---------|---------|
+|  Dummy Classifier  | 0.50 | 0.40 | 0.40  | 0.40 |
+|  Logistic Regression	| 0.59 | 0.86 | 0.00   | 0.01 |
+|  Decision Tree  | 0.58 | 0.49 | 0.51   | 0.50 |
+|  K-Nearest Neighbors  | 0.58 | 0.50 | 0.44  | 0.46 |
+|  Naive Bayes | 0.42 | 0.42 | 0.99  | 0.59 |
+|  Multilayer Perceptron | 0.57 | 0.47 | 0.26 | 0.33 |
+|  Random Forest | 0.64 | 0.59 | 0.43 | 0.50 |
+
+**Performance Real - Cross Validation**
+
+| Nome do Modelo | Acurácia | Precisão | Recall  | F1-score |
+|-----------|---------|-----------|---------|---------|
+|  Dummy Classifier | 0.52 | 0.42 | 0.41   | 0.41 |
+|  Logistic Regression	| 0.58 | 0.37 | 0.00   | 0.01 |
+|  Decision Tree  | 0.58 | 0.49 | 0.50   | 0.50 |
+|  K-Nearest Neighbors  | 0.58 | 0.49 | 0.43  | 0.46 |
+|  Naive Bayes | 0.48 | 0.37 | 0.59  | 0.36 |
+|  Multilayer Perceptron | 0.59 | 0.50 | 0.24 | 0.32 |
+|  Random Forest | 0.64 | 0.60 | 0.42 | 0.49 |
 
 # 6. Conclusão
 
